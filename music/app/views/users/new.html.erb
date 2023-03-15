@@ -1,0 +1,10 @@
+<h1> New User <h2>
+
+<form action="/users" method = "Post">
+<label for="email"> Email: </label>
+<input id ="email" type = "Text" name ="user[email]">
+<label for="password"> Password: </label>
+<input id ="password" type = "Password" name="user[password]">
+<input id ="button" type = "submit" value = "Create New User">
+<input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+</form>

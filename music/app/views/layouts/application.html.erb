@@ -8,6 +8,18 @@
 
     <%= stylesheet_link_tag "application" %>
   </head>
+  <%if !!current_user%>
+    <form action="/session" method ="post">
+    <input id="logout" type ="submit" value ="Logout">
+    <input type = "hidden" name="_method" value = "Delete">
+    <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+    </form>
+  <%else%>
+    <a href="<%=new_session_url%>">Login Page</a>
+    <br>
+    <a href="<%=new_user_url%>">New User</a>
+  <%end%>
+  
 
   <body>
     <%= yield %>

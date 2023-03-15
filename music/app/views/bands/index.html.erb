@@ -1,0 +1,19 @@
+<h1> All the bands! </h1>
+
+<a href="<%=new_band_url%>">Create New Band </a>
+
+<table>
+    <tr>
+        <th>Id </th>
+        <th>Name </th>
+    </tr>
+    <%@band.each do |band|%>
+    <tr>
+        <td><%=band.id%></td>
+        <td><a href="/bands/<%=band.id%>"><%=band.name%></a></td>
+    </tr>
+    <%end%>
+
+</table>
+
+        
